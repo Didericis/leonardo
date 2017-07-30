@@ -1,0 +1,10 @@
+# leonardo-retardo
+Dumb bookmarklet [inspired by RLM](https://www.youtube.com/watch?v=ebb8baFaQ-s&list=PLJ_TJFLc25JR3VZ7Xe-cmt4k3bMKBZ5Tm).
+
+Add a bookmark with this as the link:
+
+```
+javascript:(function()%7Bvar img%3D"https%3A%2F%2Fi.imgur.com%2FuGDCaln.jpg"%2CfadeLength%3D100%2CfadeWait%3D1e3%2CtextWait%3D1e3%2Cfade%3Dfunction(e%2Ct%2Ca)%7Bvar n%3Dt%3F.1%3A1%3Be.style.display%3D"block"%3Bvar l%3DsetInterval(function()%7B(t%26%26n>%3D1%7C%7C.1>n)%26%26(clearInterval(l)%2Ca())%2Ce.style.opacity%3Dn%2Ce.style.filter%3D"alpha(opacity%3D"%2B100*n%2B")"%2Ct%3Fn%2B%3D.1*n%3An-%3D.1*n%7D%2CfadeLength)%7D%2CreplaceImg%3Dfunction()%7Bfor(var e%3Ddocument.getElementsByTagName("img")%2Ct%3De.length%2Ca%3D0%2Cn%3DMath.floor(Math.random()*t)%3Bt>a%26%26e%5Ba%2Bn%5D.src%3D%3Dretardo%3B)a%2B%2B%3Bif(t>a)%7Bvar l%3De%5Ba%2Bn%5D%3Bfade(l%2C!1%2Cfunction()%7Bl.src%3Dimg%2Cfade(l%2C!0%2CreplaceImg)%7D)%7Delse setTimeout(replaceImg%2CfadeWait)%7D%2CgetNewText%3Dfunction(e)%7Bvar t%3D"i wll nvr let go "%3Bif(e.length>t.length)%7Bvar a%3DMath.floor(e.length%2Ft.length)%2Cn%3De.length%25t.length%3Breturn Array(a%2B1).join(t)%2Bt.substr(0%2Cn)%7Dreturn e.length>%3D4%3F"j"%2BArray(e.length-2).join("a")%2B"ck"%3Ae%7D%2CgetTextNodes%3Dfunction(e)%7Bvar t%3D%5B%5D%3Bfor(e%3De.firstChild%3Be%3Be%3De.nextSibling)%5B"SCRIPT"%2C"STYLE"%5D.indexOf(e.tagName)>%3D0%7C%7C(e.nodeType%3D%3D%3DNode.TEXT_NODE%3Ft.push(e)%3At%3Dt.concat(getTextNodes(e)))%3Breturn t%7D%2Cbody%3Ddocument.getElementsByTagName("body")%5B0%5D%2CreplaceText%3Dfunction()%7Bvar e%3DgetTextNodes(body)%2Ct%3DMath.floor(Math.random()*e.length)%2Ca%3De%5Bt%5D%3Ba.nodeValue%3DgetNewText(a.nodeValue)%2CsetTimeout(replaceText%2CtextWait)%7D%2CplayMusic%3Dfunction()%7Bvar e%3Ddocument.createElement("div")%3Be.style.display%3D"none"%2Ce.innerHTML%3D"<iframe src%3D'https%3A%2F%2Fwww.youtube.com%2Fembed%2FKolfEhV-KiA%3Fautoplay%3D1%26loop%3D1'><%2Fiframe>"%2Cdocument.getElementsByTagName("body")%5B0%5D.appendChild(e)%7D%3BreplaceText()%2CreplaceImg()%2CplayMusic()%3B%7D)()
+```
+
+Then go to a site, click, and enjoy.
