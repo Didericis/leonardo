@@ -1,4 +1,4 @@
-# leonardo-retardo
+# leonardo
 Dumb bookmarklet [inspired by RLM](https://youtu.be/ebb8baFaQ-s?list=PLJ_TJFLc25JR3VZ7Xe-cmt4k3bMKBZ5Tm&t=602).
 
 Add a bookmark with this as the link:
